@@ -1,4 +1,4 @@
-document.getElementById('loginButton').addEventListener('click', function(event){
+document.getElementById('login-button').addEventListener('click', function(event){
     event.preventDefault();
     const defaultNumber = "01883321846";
     const defaultPin = "X4F892";
