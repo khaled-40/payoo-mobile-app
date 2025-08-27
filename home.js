@@ -17,7 +17,7 @@ document.getElementById('addmoney-button').addEventListener('click', function (e
 })
 
 document.getElementById('logout-button').addEventListener('click', function () {
-    window.location.href = "/index.html"
+    window.location.href = "index.html"
 })
 
 // Button Toggle feature 
@@ -29,6 +29,13 @@ function displayBlock(forms) {
 }
 function pickTheRightForm(clickedButton, appearForm) {
     document.getElementById(clickedButton).addEventListener('click', function () {
+        let buttonsCollection = document.getElementsByClassName('buttons');
+        for(let btn of buttonsCollection){
+            btn.classList.remove("border-blue-500", "bg-[#F4F5F7]")
+            btn.classList.add("border-gray-300")
+        }
+        document.getElementById(clickedButton).classList.remove("border-gray-300")
+        document.getElementById(clickedButton).classList.add("border-blue-500", "bg-[#F4F5F7]")
         let forms = document.getElementsByClassName('forms');
         displayBlock(forms);
         const item = document.getElementById(appearForm);
@@ -41,4 +48,5 @@ pickTheRightForm("btn-2", "cash-out")
 pickTheRightForm("btn-3", "transfer-money")
 pickTheRightForm("btn-4", "get-bonus")
 pickTheRightForm("btn-5", "pay-bill")
-
+pickTheRightForm("btn-6", "transaction")
+// border-blue-500 bg-[#F4F5F7]
