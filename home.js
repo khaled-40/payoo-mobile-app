@@ -1,3 +1,5 @@
+
+// Add Money funtionality 
 document.getElementById('addmoney-button').addEventListener('click', function (event) {
     event.preventDefault();
     const setNumber = '01883321846';
@@ -10,6 +12,33 @@ document.getElementById('addmoney-button').addEventListener('click', function (e
         let initialAmount = parseInt(document.getElementById('current-amount').innerText);
         const totalAmount = initialAmount + amountConverted;
         document.getElementById('current-amount').innerText = totalAmount;
-        
+
     }
 })
+
+document.getElementById('logout-button').addEventListener('click', function () {
+    window.location.href = "/index.html"
+})
+
+// Button Toggle feature 
+
+function displayBlock(forms) {
+    for (let form of forms) {
+        form.style.display = "none";
+    }
+}
+function pickTheRightForm(clickedButton, appearForm) {
+    document.getElementById(clickedButton).addEventListener('click', function () {
+        let forms = document.getElementsByClassName('forms');
+        displayBlock(forms);
+        const item = document.getElementById(appearForm);
+        item.style.display = "block";
+
+    })
+}
+pickTheRightForm("btn-1", "add-money")
+pickTheRightForm("btn-2", "cash-out")
+pickTheRightForm("btn-3", "transfer-money")
+pickTheRightForm("btn-4", "get-bonus")
+pickTheRightForm("btn-5", "pay-bill")
+
