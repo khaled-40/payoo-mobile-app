@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="max-w-lg mx-auto my-0 outfit ">
+<body class="max-w-lg mx-auto my-0 pb-2 outfit bg-[#F4F5F7]">
     <div class="bg-white rounded-b-3xl">
         <div class=" bg-white flex justify-between items-center border-b border-gray-300">
             <div class="flex gap-3 justify-start items-center ml-4">
@@ -68,108 +68,118 @@
             </div>
         </div>
     </div>
-    <!-- Add Money Form  -->
-    <div id="add-money" class="forms ">
-        <div  class="m-6">
-            <h3 class="font-bold text-lg">Add Money</h3>
+    <div id="parent-div" style="display: none;">
+        <!-- Add Money Form  -->
+        <div id="add-money" class="forms ">
+            <div class="m-6">
+                <h3 class="font-bold text-lg">Add Money</h3>
+            </div>
+            <div class="bg-white m-6 p-4 rounded-xl">
+                <form>
+                    <label for="select" class="font-bold text-lg text-gray-700">Select A Bank</label>
+                    <select class="select w-full rounded-2xl my-2 bg-[#F4F5F7] text-gray-400">
+                        <option disabled selected class="text-gray-400">Select Bank</option>
+                        <option>AB Bank</option>
+                        <option>IBIC Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                    </select>
+                    <label class="font-bold text-lg text-gray-700" for="number">Bank Account Number</label><br>
+                    <input id="number-home" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
+                        placeholder="Enter 11 Digit Account Number"><br>
+                    <label class="font-bold text-lg text-gray-700" for="number">Amount to add</label><br>
+                    <input id="number-home-2" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
+                        placeholder="Add Amount"><br>
+                    <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
+                    <input id="password-home" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="password" placeholder="Enter PIN"><br>
+                    <button id="addmoney-button" class="btn btn-primary w-full my-2 rounded-2xl">Add Money</button>
+            </div>
         </div>
-        <div class="bg-white m-6 p-4 rounded-xl">
-            <form>
-                <label for="select" class="font-bold text-lg text-gray-700">Select A Bank</label>
-                <select class="select w-full rounded-2xl my-2 bg-[#F4F5F7] text-gray-400">
-                    <option disabled selected class="text-gray-400">Select Bank</option>
-                    <option>AB Bank</option>
-                    <option>IBIC Bank</option>
-                    <option>Dutch Bangla Bank</option>
-                </select>
-                <label class="font-bold text-lg text-gray-700" for="number">Bank Account Number</label><br>
-                <input id="number-home" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
-                    placeholder="Enter 11 Digit Account Number"><br>
-                <label class="font-bold text-lg text-gray-700" for="number">Amount to add</label><br>
-                <input id="number-home-2" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
-                    placeholder="Add Amount"><br>
-                <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
-                <input id="password-home" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="password"
-                    placeholder="Enter PIN"><br>
-                <button id="addmoney-button" class="btn btn-primary w-full my-2 rounded-2xl">Add Money</button>
+        <!-- Cash Out Form  -->
+        <div id="cash-out" class="forms">
+            <div class=" m-6">
+                <h3 class="font-bold text-lg">Cash Out</h3>
+            </div>
+            <div class="bg-white m-6 p-4 rounded-xl">
+                <form>
+                    <label class="font-bold text-lg text-gray-700" for="number">Agent Number</label><br>
+                    <input id="number-home-withdraw" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="number" placeholder="Enter 11 Digit Account Number"><br>
+                    <label class="font-bold text-lg text-gray-700" for="number">Amount</label><br>
+                    <input id="number-home-2-withdraw" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="number" placeholder="Add amount to withdraw"><br>
+                    <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
+                    <input id="password-home-withdraw" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="password" placeholder="Enter PIN"><br>
+                    <button id="withdraw-button" class="btn btn-primary w-full my-2 rounded-2xl">Withdraw Money</button>
+            </div>
+        </div>
+        <!-- Transfer Money Form  -->
+        <div id="transfer-money" class="forms">
+            <div class="m-6">
+                <h3 class="font-bold text-lg">Transfer Money</h3>
+            </div>
+            <div class="bg-white m-6 p-4 rounded-xl">
+                <form>
+                    <label class="font-bold text-lg text-gray-700" for="number">User Account Number</label><br>
+                    <input id="number-home-send" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="number" placeholder="Enter 11 Digit Account Number"><br>
+                    <label class="font-bold text-lg text-gray-700" for="number">Amount</label><br>
+                    <input id="number-home-2-send" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="number" placeholder="Enter Amount To Transfer"><br>
+                    <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
+                    <input id="password-home-send" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="password" placeholder="Enter PIN"><br>
+                    <button id="sendnow-button" class="btn btn-primary w-full my-2 rounded-2xl">Send Now</button>
+            </div>
+        </div>
+        <!-- Get Bonus Section  -->
+        <div id="get-bonus" class="forms">
+            <div class="m-6">
+                <h3 class="font-bold text-lg">Get Bonus</h3>
+            </div>
+            <div class="bg-white m-6 p-4 rounded-xl">
+                <form>
+                    <label class="font-bold text-lg text-gray-700" for="text">Enter Bonus Coupon</label><br>
+                    <input id="number-home-bonus" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="text" placeholder="Enter Your Coupon"><br>
+                    <button id="getbonus-button" class="btn btn-primary w-full my-2 rounded-2xl">Get Bonus</button>
+            </div>
+        </div>
+        <!-- Pay Bill section  -->
+        <div id="pay-bill" class="forms">
+            <div class="m-6">
+                <h3 class="font-bold text-lg">Pay Bill</h3>
+            </div>
+            <div class="bg-white m-6 p-4 rounded-xl">
+                <form>
+                    <label for="select" class="font-bold text-lg text-gray-700">Select To Pay</label>
+                    <select class="select w-full rounded-2xl my-2 bg-[#F4F5F7] text-gray-400">
+                        <option disabled selected class="text-gray-400">Select Back</option>
+                        <option>AB Bank</option>
+                        <option>IBIC Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                    </select>
+                    <label class="font-bold text-lg text-gray-700" for="number">Biller Account Number</label><br>
+                    <input id="number-home-pay" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="number" placeholder="Enter Account Number"><br>
+                    <label class="font-bold text-lg text-gray-700" for="number">Amount to pay</label><br>
+                    <input id="number-home-2-pay" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="number" placeholder="Add Amount To Pay"><br>
+                    <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
+                    <input id="password-home-pay" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
+                        type="password" placeholder="Enter PIN"><br>
+                    <button id="paynow-button" class="btn btn-primary w-full my-2 rounded-2xl">Pay Now</button>
+            </div>
         </div>
     </div>
-    <!-- Cash Out Form  -->
-    <div id="cash-out" class="forms">
-        <div class=" m-6">
-            <h3 class="font-bold text-lg">Cash Out</h3>
+    <!-- Transaction Section  -->
+    <div id="transaction" class="forms">
+        <div class="m-6 flex justify-between items-center">
+            <h3 class="font-bold text-lg">Transaction</h3>
+            <p class="text-sm text-gray-700">View All</p>
         </div>
-        <div class="bg-white m-6 p-4 rounded-xl">
-            <form>
-                <label class="font-bold text-lg text-gray-700" for="number">Agent Number</label><br>
-                <input id="number-home-withdraw" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
-                    type="number" placeholder="Enter 11 Digit Account Number"><br>
-                <label class="font-bold text-lg text-gray-700" for="number">Amount</label><br>
-                <input id="number-home-2-withdraw" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
-                    type="number" placeholder="Add amount to withdraw"><br>
-                <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
-                <input id="password-home-withdraw" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
-                    type="password" placeholder="Enter PIN"><br>
-                <button id="withdraw-button" class="btn btn-primary w-full my-2 rounded-2xl">Withdraw Money</button>
-        </div>
-    </div>
-    <!-- Transfer Money Form  -->
-    <div id="transfer-money" class="forms">
-        <div class="m-6">
-            <h3 class="font-bold text-lg">Transfer Money</h3>
-        </div>
-        <div class="bg-white m-6 p-4 rounded-xl">
-            <form>
-                <label class="font-bold text-lg text-gray-700" for="number">User Account Number</label><br>
-                <input id="number-home-send" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
-                    placeholder="Enter 11 Digit Account Number"><br>
-                <label class="font-bold text-lg text-gray-700" for="number">Amount</label><br>
-                <input id="number-home-2-send" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
-                    type="number" placeholder="Enter Amount To Transfer"><br>
-                <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
-                <input id="password-home-send" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
-                    type="password" placeholder="Enter PIN"><br>
-                <button id="sendnow-button" class="btn btn-primary w-full my-2 rounded-2xl">Send Now</button>
-        </div>
-    </div>
-    <!-- Get Bonus Section  -->
-    <div id="get-bonus" class="forms">
-        <div class="m-6">
-            <h3 class="font-bold text-lg">Get Bonus</h3>
-        </div>
-        <div class="bg-white m-6 p-4 rounded-xl">
-            <form>
-                <label class="font-bold text-lg text-gray-700" for="text">Enter Bonus Coupon</label><br>
-                <input id="number-home-bonus" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="text"
-                    placeholder="Enter Your Coupon"><br>
-                <button id="getbonus-button" class="btn btn-primary w-full my-2 rounded-2xl">Get Bonus</button>
-        </div>
-    </div>
-    <!-- Pay Bill section  -->
-    <div id="pay-bill" class="forms">
-        <div class="m-6">
-            <h3 class="font-bold text-lg">Pay Bill</h3>
-        </div>
-        <div class="bg-white m-6 p-4 rounded-xl">
-            <form>
-                <label for="select" class="font-bold text-lg text-gray-700">Select To Pay</label>
-                <select class="select w-full rounded-2xl my-2 bg-[#F4F5F7] text-gray-400">
-                    <option disabled selected class="text-gray-400">Select Back</option>
-                    <option>AB Bank</option>
-                    <option>IBIC Bank</option>
-                    <option>Dutch Bangla Bank</option>
-                </select>
-                <label class="font-bold text-lg text-gray-700" for="number">Biller Account Number</label><br>
-                <input id="number-home-pay" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
-                    placeholder="Enter Account Number"><br>
-                <label class="font-bold text-lg text-gray-700" for="number">Amount to pay</label><br>
-                <input id="number-home-2-pay" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3" type="number"
-                    placeholder="Add Amount To Pay"><br>
-                <label class="font-bold text-lg text-gray-700" for="password">PIN Number</label><br>
-                <input id="password-home-pay" class="w-full my-3 rounded-2xl border-none bg-[#F4F5F7] p-3"
-                    type="password" placeholder="Enter PIN"><br>
-                <button id="paynow-button" class="btn btn-primary w-full my-2 rounded-2xl">Pay Now</button>
-        </div>
+        
     </div>
     <script src="home.js"></script>
 </body>
